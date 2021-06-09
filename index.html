@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <div class="header-container">
+        <div class="header-content">
+          <h1 class="logo">
+            THIS INTERIOR
+          </h1>
+          <button class="hamburger-button" id="hamburger-button" onclick="toggleNavigation()">
+            <div class="hamburger-button__bar"></div>
+            <div class="hamburger-button__bar"></div>
+            <div class="hamburger-button__bar"></div>
+          </button>
+        </div>
+
+        <nav>
+          <div class="nav" id="nav">
+            <ul>
+              <li class="nav-item"><a href="">HOME</a></li>
+              <li class="nav-item"><a href="">Collection</a></li>
+              <li class="nav-item"><a href="">About</a></li>
+              <li class="nav-item"><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="backdrop"></div>
+
+          <div class="nav-wide" id="nav-wide">
+            <ul>
+              <li class="nav-item"><a href="">HOME</a></li>
+              <li class="nav-item"><a href="">Collection</a></li>
+              <li class="nav-item"><a href="">About</a></li>
+              <li class="nav-item"><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="text-container">
+        <div class="inside-wrap">
+          <h3>
+            Modern interior
+          </h3>
+          <p class="introduction">
+            A full-Service residential & commercial interior design and staging company offering professional organizing
+            &
+            eco-services.
+          </p>
+
+          <a href="" class="readMore">
+            Read more 　→
+          </a>
+        </div>
+      </div>
+
+      <div class="img-container">
+        <div class="img-wrap">
+          <img src="photo1.png" alt="room">
+        </div>
+
+        <div class="designer-wrap">
+          <div class="designer">
+            <img class="designer-img" src="photo2.png" alt="Aliza Webber">
+            <div class="designer-info">
+              <span class="name">Aliza Webber</span><br>
+              <span class="role">Interior designer</span>
+            </div>
+
+            <div class="date">
+              Designed in 2020 by Aliza Webber
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span class="author">created by <a href="#">mk-9433</a> - devChallenges.io</span>
+    </footer>
+
+  </div>
+
+  <script>
+    const toggle = (elementId) => {
+      const element = document.getElementById(elementId);
+
+      if (element.classList.contains(elementId + "--open")) {
+        element.classList.remove(elementId + "--open")
+      } else {
+        element.classList.add(elementId + "--open")
+      }
+    }
+
+    const toggleNavigation = () => {
+      toggle("nav");
+      toggle("hamburger-button");
+    }
+  </script>
+
+</body>
+
+</html>
